@@ -45,11 +45,11 @@ img {
     height: auto;
 }
 
-/* CSS BASE  */
+/* LAYOUT CSS BASE  */
 body {
     font: 400 var(--subtitle-font-size) var(--body-font);
     color: var(--text-color);
-    background: var(body-bg-color);
+    background: var(--body-color);
     -webkit-font-smoothing: antialiased;
 }
 
@@ -68,8 +68,25 @@ body {
     gap: 2rem;
 }
 
-section {
+.section {
     padding: 5rem 0;
+}
+
+.section .title {
+    margin-bottom: 1rem;
+}
+
+#header {
+    border-bottom: 1px solid #e4e4e4;
+    margin-bottom: 2rem;
+    display: flex;
+
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    background-color: var(--body-color);
 }
 
 main {
@@ -110,12 +127,24 @@ main {
     );
 }
 
+/* LOGO */
+
+.logo {
+    font: 700 1.31rem var(--title-font);
+    color: var(--title-color);
+}
+
+.logo span {
+    color: var(--base-color);
+}
+
 /* NAVIGATION */
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: var(--header-height);
+    width: 100%;
 }
 
 nav ul li {
@@ -152,6 +181,7 @@ nav .menu  {
     visibility: hidden;
 }
 
+/* MOSTRAR MENU */
 nav.show .menu {
     opacity: 1;
     visibility: visible;
@@ -171,28 +201,24 @@ nav.show ul.grid {
     gap: 4rem;
 }
 
-#header {
-    border-bottom: 1px solid #e4e4e4;
-    margin-bottom: 2rem;
-    display: flex;
-
-    width: 100%;
-    position: fixed;
-    z-index: 100;
-    top: 0;
-    left: 0;
-    background-color: var(--body-color);
-}
-
-/* LOGO */
-
-.logo {
-    font: 700 1.31rem var(--title-font);
-    color: var(--title-color);
-}
-
-.logo span {
+/* TOGGLE MENU */
+.toggle {
     color: var(--base-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+nav .icon-close {
+    visibility: hidden;
+    opacity: 0;
+
+    position:absolute;
+    right: 1.5rem;
+}
+
+nav.show div.icon-close {
+    visibility: visible;
+    opacity: 1;
 }
 
 /* HOME */
@@ -240,4 +266,42 @@ nav.show ul.grid {
 
 #home .text p {
     margin-bottom: 2rem;
+}
+
+/* ABOUT */
+#about {
+    overflow: hidden;
+    background: #fff;
+}
+
+#about .container {
+    margin: 0;
+}
+
+#about .image {
+    position: relative;
+}
+
+#about .image::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: var(--base-color-second);
+    position: absolute;
+    top: -8.3%;
+    left: -33%;
+    z-index: 0;
+}
+
+#about .image img {
+    position: relative;
+}
+
+#about .image img,
+#about .image::before {
+    border-radius: 0.25rem;
+}
+
+#about .text {
+    margin: 0 1.5rem;
 }
