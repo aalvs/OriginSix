@@ -1,5 +1,5 @@
 /* GOOGLE FONTS */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
 
 /* VARIABLES */
@@ -417,10 +417,10 @@ nav.show div.icon-close {
     clip-path: circle();
 }
 
-/* swiper */
+/* SWIPER CSS */
 .swiper-slide {
     height: auto;
-    padding: 4rem 1rem;
+    padding: 4rem 0.75rem;
 }
   
 .swiper-pagination-bullet {
@@ -430,4 +430,32 @@ nav.show div.icon-close {
   
 .swiper-pagination-bullet-active {
     background: var(--base-color);
+}
+
+/* CONTACT */
+#contact .grid {
+    gap: 4rem;
+}
+
+#contact .text p{
+    margin-bottom: 2rem;
+}
+
+#contact .button i,
+#contact ul li i {
+    font-size: 1.5rem;
+    margin-right: 0.625rem;
+}
+
+#contact ul li i {
+    color: var(--base-color);
+}
+
+#contact ul.grid {
+    gap: 2rem;
+}
+
+#contact ul li {
+    display: flex;
+    align-items: center;
 }
