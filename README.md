@@ -33,7 +33,7 @@ Bibliotecas
 
 Utilitários
 
-- [randomuser.me](https://randomuser.me/photos)
+- [Generated Photos](https://generated.photos/)
 - [IconMoon](https://icomoon.io/app/#/select)
 
 ## 💻 Projeto
